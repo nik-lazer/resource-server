@@ -1,0 +1,19 @@
+lan:
+  test:
+    oauth:
+      idp-url: https://login.microsoftonline.com/${lan.test.oauth.tenant}
+      audience: ${lan.test.oauth.client}
+      authorization-url: ${lan.test.oauth.idp-url}/oauth2/v2.0/authorize
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${lan.test.oauth.idp-url}/v2.0
+          jwk-set-uri: ${lan.test.oauth.idp-url}/discovery/v2.0/keys
+springdoc:
+  show-actuator: true
+  swagger-ui:
+    oauth:
+      client-id: ${lan.test.oauth.client}
+      scopes: ${lan.test.oauth.scopes}

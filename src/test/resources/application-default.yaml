@@ -1,0 +1,6 @@
+lan:
+  test:
+    oauth:
+      tenant: tenant
+      client: client
+      scopes: scope
