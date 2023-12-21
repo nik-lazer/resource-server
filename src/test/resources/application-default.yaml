@@ -4,3 +4,6 @@ lan:
       tenant: tenant
       client: client
       scopes: scope
+      authorization-url: http://localhost:8180/
+      issuer-uri: http://localhost:8180/
+      jwk-set-uri: http://localhost:8180/
